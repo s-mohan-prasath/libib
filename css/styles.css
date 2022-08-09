@@ -1,0 +1,132 @@
+html{
+    font-size: 62.5%;
+}
+:root{
+
+    --color-primary:#4bc1d2;
+    --color-secondary:#03151e;
+
+    --fontSize-p:2.88rem;
+    --fontSize-h1:7.2rem;
+    --fontSize-btn:1.92rem;
+
+    --fontWeight-p:300;
+    --fontWeight-h1:900;
+    --fontWeight-btn:700;
+
+    --lineHeight-p:4.60rem;
+    --lineHeight-h1:5.44rem;
+
+}
+*{
+    font-family: Roboto,sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.25s;
+}
+h1{
+    font-weight: var(--fontWeight-h1);
+    margin: 0 0 3rem 0;
+}
+p{
+    font-size: var(--fontSize-p);
+    line-height: var(--lineHeight-p);
+    margin: 20px 0;
+}
+a{
+    text-decoration: none;
+    
+}
+
+/* Buttons */
+
+.btn-black{
+    background-color: var(--color-secondary);
+    font-size: var(--fontSize-btn);
+    border: 3px solid var(--color-secondary);
+    padding: 0.8rem 2.8rem;
+    color: white;
+    border-radius: 10rem;
+    text-decoration: none;
+}
+.btn-black-1{
+    margin:0 0 0 2rem;
+}
+.btn-black-2{
+    margin:0 2rem 0 4rem;
+}
+.btn-black:hover{
+    background-color: white;
+    color: black;
+
+}
+.btn-blue{
+    background-color: var(--color-primary);
+    font-size: var(--fontSize-btn);
+    border: 1px solid white;
+    text-decoration: none;
+    margin: 0 0 1.6rem 0;
+    padding: 1rem 3rem;
+    color: white;
+}
+
+/* NAVIGATION SECTION */
+nav{
+    width: 100%;
+    padding: 3rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px;
+}
+.nav-bar{
+    width: 100%;
+    max-width: 1170px;
+    display: flex;
+    font-size: var(--fontSize-btn);
+    justify-content: space-between;
+    align-items: center;
+    margin:0 auto;
+}
+.nav-logo{
+    width: 14.5rem;
+}
+.nav-logo-cont{
+    margin: 0 0 0 2rem;
+}
+.nav-logo-cont{
+    background-color: black;
+}
+.nav-item{
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+}
+.nav-item:hover{
+    background-color: #b3e0e7;
+    border: 1px solid gray;
+    border-radius: 1rem;
+    text-decoration: underline;
+}
+.icon-menu{
+    margin: 0 2rem 0 0;
+}
+.icon-menu:hover{
+    cursor: pointer;
+}
+.nav-item,.btn-black{
+    display: none;
+}
+
+@media screen and (min-width:1024px) {
+    .icon-menu{
+        display: none;
+    }
+    .nav-item, .btn-black{
+        display: inline-block;
+    }
+    
+}
+
+
+
