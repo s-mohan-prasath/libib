@@ -29,12 +29,14 @@ html{
     padding: 0;
     box-sizing: border-box;
     transition: all 0.25s;
+    position: relative;
 }
 *::selection{
     background-color: var(--color-selection);
 }
 h1,h2,h3{
     font-weight: var(--fontWeight-h1);
+    text-align: center;
     margin: 0 auto;
 }
 h1{
@@ -54,6 +56,7 @@ p{
     font-weight: var(--fontWeight-p);
     line-height: var(--lineHeight-p);
     margin: 20px 0;
+    
 }
 a{
     text-decoration: none;
@@ -72,6 +75,7 @@ a{
     }
     p{
         font-size: 1.76rem;
+        line-height: 1.6;
     }
 }
 
@@ -107,6 +111,45 @@ a{
     color: white;
     font-weight: var(--fontWeight-btn);
     width: fit-content;
+}
+
+/* CONTAINER */
+
+.container{
+    width: 100%;
+    display: grid;
+    grid-template: repeat(2,auto)/auto;
+    gap: 1.5rem;
+    align-items: center;
+    justify-items: center;
+    max-width: 1170px;
+    margin: 3rem 0 0 0;
+}
+.container div1{
+    width: 100%;
+}
+.container div2{
+    width: 100%;
+}
+.container video,.container img{
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    border-radius: 1.5rem;
+}
+.container p{
+    text-align: center;
+}
+
+@media screen and (min-width:1024px) {
+    .container{
+        grid-template: auto / repeat(2,1fr);
+        justify-content: center;
+        align-items: center;
+    }
+    .container video,.container img{
+        width: 100%;
+    }
 }
 
 /* NAVIGATION SECTION */
@@ -214,6 +257,7 @@ nav{
     }
 }
 /* COLLECTIONS SECTION */
+
 .collection{
     display: flex;
     flex-direction: column;
@@ -234,6 +278,85 @@ nav{
     }
 }
 
+/* FEATURE SECTION */
 
+.feature{
+    padding: 0 1.5rem;
+    margin: 10rem 0 6rem 0;
+}
+.feature-cont{
+    margin: 10rem auto;
+}
 
+/* REVIEW SECTION */
 
+.review{
+    width: 100%;
+    padding: 15rem 0;
+}
+.review-cont{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 750px;
+    z-index: 50;
+}
+.review p{
+    text-align: center;
+}
+.review img{
+    width: 350px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+@media screen and (max-width:768px) {
+    .review img{
+        display: none;
+    }
+    .review{
+        padding: 0 2rem;
+    }
+}
+
+/* TRUST SECTION */
+.trust{
+    width: 100%;
+    max-width: 1170px;
+    padding: 15rem 0;
+    margin: 0 auto;
+}
+.trust .trust__img{
+    width: 20%;
+}
+.trust__img-div{
+    display: flex;
+    width: 100%;
+    flex-basis: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    margin: 4.5rem 0 0;
+}
+
+/* Get App Section */
+.get-app{
+    margin:0 auto;
+    max-width: 1170px;
+}
+.get-app div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app-store,.play-store{
+    width: 10rem;
+    justify-items: center;
+    margin: 2rem 0 0 0;
+}
+.get-app__img{
+    width: 50%;
+    margin: 0 auto;
+}
+.get-app p,.get-app h2{
+    text-align: start;
+}
